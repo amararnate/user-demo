@@ -9,7 +9,7 @@
                             <img :src="user.avatar_url">
                         </div>
                         <div class="user-login-name align-center">
-                            <label>{{ user.login }}</label>
+                            <a>{{ user.login }}</a>
                         </div>
                     </router-link>
                     <div class="github-link align-center">

@@ -16,7 +16,7 @@
         <div>
             <div v-for="userRepo in userRepos" :key="userRepo.id" class="repo-details">
                 <div class="repo-name">
-                    <a :href="userRepo.owner.html_url" target="_blank">{{ userRepo.name }}</a>
+                    <a :href="userRepo.html_url" target="_blank">{{ userRepo.name }}</a>
                 </div>
                 <div class="repo-watchers">
                     <label><img class="icon" :src="watchIcon"></label>
