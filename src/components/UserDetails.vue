@@ -15,7 +15,9 @@
         </div>
         <div>
             <div v-for="userRepo in userRepos" :key="userRepo.id" class="repo-details">
-                <div class="repo-name">{{ userRepo.name }}</div>
+                <div class="repo-name">
+                    <a :href="userRepo.owner.html_url" target="_blank">{{ userRepo.name }}</a>
+                </div>
                 <div class="repo-watchers">
                     <label><img class="icon" :src="watchIcon"></label>
                     <label>{{ userRepo.watchers_count }}</label>
@@ -98,5 +100,6 @@ export default {
 .back-icon {
     margin-top: 20px;
     margin-left: 10px;
+    position: fixed;
 }
 </style>

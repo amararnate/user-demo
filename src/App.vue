@@ -1,6 +1,6 @@
 <template>
     <header-layout></header-layout>
-    <div class="main">
+    <div class="container">
         <router-view/>
     </div>
     <footer-layout></footer-layout>
@@ -9,6 +9,7 @@
 <script>
 import HeaderLayout from "@/components/layout/HeaderLayout";
 import FooterLayout from "@/components/layout/FooterLayout";
+import '@/assets/css/app.css'
 
 export default {
     name: 'app',
@@ -18,12 +19,3 @@ export default {
     }
 }
 </script>
-<style scoped>
-
-.main {
-    position: absolute;
-    top: 80px;
-    width: 99%;
-    height: 100%;
-}
-</style>

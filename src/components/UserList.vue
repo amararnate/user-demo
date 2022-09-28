@@ -4,19 +4,19 @@
         <div class="user-lists">
             <div v-for="user in filteredUserLists" :key="user.id" class="user align-center">
                 <div>
-                    <div class="user-image">
-                        <img :src="user.avatar_url">
-                    </div>
-                    <div class="user-login-name align-center">
-                        <label>{{ user.login }}</label>
-                    </div>
+                    <router-link :to="'/'+user.login" exact class="cursor-pointer">
+                        <div class="user-image">
+                            <img :src="user.avatar_url">
+                        </div>
+                        <div class="user-login-name align-center">
+                            <label>{{ user.login }}</label>
+                        </div>
+                    </router-link>
                     <div class="github-link align-center">
-                        <router-link :to="'/'+user.login" exact>
-                            <a>
-                                <img :src="linkIcon" class="link-icon">
-                                <span>github</span>
-                            </a>
-                        </router-link>
+                        <a :href="user.html_url" target="_blank">
+                            <img :src="linkIcon" class="link-icon">
+                            <span>github</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -75,7 +75,7 @@ export default {
 }
 
 .github-link {
-    margin-top: 2px;
+    margin-top: 8px;
     color: #0079D1;
     text-decoration: none;
     background-color: transparent;
@@ -85,4 +85,5 @@ export default {
 .github-link img {
     width: 12px;
 }
+
 </style>

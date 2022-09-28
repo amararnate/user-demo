@@ -1,5 +1,5 @@
 <template>
-    <footer class="footer align-center">
+    <footer class="footer align-center fixed-footer">
         <div>
             <div class="footer-logo">
                 <a href="https://github.com" target="_blank">
@@ -31,24 +31,3 @@ export default {
     }
 }
 </script>
-
-<style scoped>
-.footer {
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    width: 100%;
-    height: 80px;
-    background: #24292F;
-    box-shadow: 0px 12px 36px rgba(204, 204, 204, 0.25);
-}
-
-.site-right-label {
-    color: white;
-}
-
-.footer-logo {
-    display: flex;
-    justify-content: center;
-}
-</style>
